@@ -7,8 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*" />
             <RowDefinition Height="0.1*" />
@@ -21,9 +20,14 @@
             <ColumnDefinition Width="0.25*" />
             <ColumnDefinition Width="0.25*" />
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlock" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Special Requests:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="Order Items:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock2" Grid.Row="4" TextWrapping="Wrap" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="textBlock3" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <AppBar Grid.ColumnSpan="3">
+            <AppBarButton Icon="Home" Click="AppBarButton_Click"/>
+        </AppBar>
+        <ListView Grid.Row="1" Grid.RowSpan="3"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Special Requests:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="Order Items:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ListView Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+        <Button Grid.Row="4" Content="Add to Order" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Page>
