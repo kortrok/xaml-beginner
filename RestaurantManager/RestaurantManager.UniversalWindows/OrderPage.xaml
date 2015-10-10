@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*" />
             <RowDefinition Height="0.1*" />
@@ -23,10 +23,10 @@
         <AppBar Grid.ColumnSpan="3">
             <AppBarButton Icon="Home" Click="AppBarButton_Click"/>
         </AppBar>
-        <ListView Grid.Row="1" Grid.RowSpan="3"/>
+        <ListView Grid.Row="1" Grid.RowSpan="3" DataContext="{StaticResource DataManager}" ItemsSource="{Binding Path=MenuItems}" />
         <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Special Requests:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="Order Items:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <ListView Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+        <ListView Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" DataContext="{StaticResource DataManager}" ItemsSource="{Binding Path=CurrentlySelectedMenuItems}"/>
         <Button Grid.Row="4" Content="Add to Order" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>

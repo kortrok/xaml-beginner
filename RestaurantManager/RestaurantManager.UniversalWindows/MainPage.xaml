@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*" />
             <RowDefinition Height="0.1*" />
@@ -18,8 +18,8 @@
             <ColumnDefinition Width="0.5*" />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="Restaurant Manager"/>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="Internal Test Vesrion"/>
-        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="**Go to Orders View**" Click="ExpeditePage_Click"/>
-        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="**Submit Order**" Click="OrderPage_Click"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="Internal Test Vesrion" FontSize="24"/>
+        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Go to Orders View" Click="ExpeditePage_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Submit Order" Click="OrderPage_Click"/>
     </Grid>
 </Page>
